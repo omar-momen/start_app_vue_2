@@ -1,0 +1,375 @@
+.input_wrapper {
+  text-align: start;
+
+  label {
+    display: block;
+    margin: 2px 0;
+    font-size: 18px;
+
+    span.requiredAstric {
+      color: red;
+    }
+  }
+
+  ._input {
+    position: relative;
+    height: 50px;
+    margin-bottom: 2px;
+
+    input,
+    textarea {
+      border: 1px solid var(--inputBorder);
+      height: inherit;
+      padding-block: 8px;
+      padding-inline-start: 20px;
+      padding-inline-end: 40px;
+      width: 100%;
+      font-size: 20px;
+      background: #fff;
+
+      &::placeholder {
+        color: var(--inputBorder);
+        font-size: 18px;
+      }
+
+      &:focus {
+        border-color: #a2a2a2;
+        outline: none;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 15px; // RTL
+      cursor: pointer;
+
+      i {
+      }
+
+      img {
+      }
+    }
+  }
+
+  .v-alert {
+    transition: 0.2s linear;
+  }
+
+  // ========== textarea
+  &.textarea {
+    ._input {
+      height: auto;
+
+      textarea {
+        height: auto;
+        resize: none;
+      }
+    }
+  }
+
+  // ========== otp Input
+  .v-otp-input {
+    margin-block: 50px;
+    justify-content: center;
+
+    .v-input {
+      width: 75px;
+      flex: unset;
+
+      .v-text-field__slot {
+        border-bottom: 5px solid var(--main) !important;
+      }
+    }
+  }
+
+  // ========== Search
+  &.search {
+    ._input {
+      height: 70px;
+
+      input {
+        background: #fff;
+        border-radius: 20px;
+      }
+
+      .icon {
+      }
+    }
+
+    .keywords {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      span {
+        margin-inline: 7px;
+        font-size: 15px;
+      }
+
+      .main {
+        color: #fff;
+        font-size: 17px;
+      }
+
+      .colored {
+        color: #dee2e6;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // ========== Vutify Inputs
+  &.picker,
+  &.autoComplete,
+  &.radio {
+    .v-input {
+      height: 50px;
+      padding: 0;
+      margin: 0;
+
+      .v-input__control {
+        height: inherit;
+        .v-input__slot {
+          height: inherit;
+          margin: 0;
+
+          &::after,
+          &::before {
+            display: none !important;
+          }
+
+          .v-text-field__slot {
+            height: inherit;
+
+            label.v-label {
+              left: 20px !important;
+              top: 50%;
+              transform: translateY(-50%);
+
+              &.v-label--active {
+                display: none;
+              }
+            }
+
+            input {
+              border: 1px solid var(--inputBorder);
+              height: inherit;
+              max-height: inherit;
+              padding-block: 8px;
+              padding-inline-start: 20px;
+              padding-inline-end: 40px;
+              width: 100%;
+              font-size: 20px;
+              background: #fff;
+
+              &:focus {
+                border-color: #a2a2a2;
+                outline: none;
+              }
+            }
+          }
+        }
+        .v-text-field__details {
+          display: none;
+        }
+      }
+    }
+  }
+  &.autoComplete {
+    input {
+      border: none;
+    }
+
+    .v-input {
+      border: 1px solid var(--inputBorder);
+    }
+  }
+  &.radio {
+    .v-input__control {
+      justify-content: center;
+    }
+
+    .v-input--radio-group__input {
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-around !important;
+    }
+
+    .v-messages {
+      display: none;
+    }
+  }
+
+  // ========== Light
+  &.light {
+    label {
+      color: #fff;
+    }
+
+    ._input {
+      input {
+      }
+    }
+  }
+
+  // Uplode Image
+  &.uplodeImage {
+    margin-block: 20px;
+
+    .chooseImage {
+      position: relative;
+      text-align: center;
+      cursor: pointer;
+      margin: 10px auto;
+      width: 300px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        .overlay {
+          opacity: 1;
+
+          i {
+            transform: scale(5);
+          }
+        }
+      }
+
+      img {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 150px;
+        display: inline-block;
+        font-size: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+
+      .placholder {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 150px;
+        padding: 6px 0;
+        display: inline-block;
+        font-size: 15px;
+        text-transform: uppercase;
+        border-radius: 20px;
+        background: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        span {
+          color: #333;
+          display: block;
+        }
+
+        .icons {
+          display: flex;
+          justify-content: space-between;
+
+          i {
+            display: block;
+            margin-inline: 5px;
+          }
+        }
+      }
+
+      .file_input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.2s linear;
+        opacity: 0;
+
+        i {
+          display: block;
+          margin-inline: 35px;
+          color: #eee;
+          font-size: 15px;
+          transition: all 0.2s linear;
+          transform: scale(0);
+        }
+      }
+    }
+  }
+}
+
+// ===================== Start:: Date && Time Dialog =====================
+.v-dialog__content {
+  width: 500px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  .v-dialog {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0;
+
+    .v-picker {
+      padding-top: 0 !important;
+
+      .v-picker__title {
+        display: flex;
+        justify-content: center;
+
+        & > div {
+          width: fit-content;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 98vw !important;
+  }
+}
+// ===================== End:: Date && Time Dialog =====================
+
+body.rtl {
+  .input_wrapper {
+    ._input {
+      .icon {
+        right: unset;
+        left: 15px;
+      }
+    }
+  }
+}

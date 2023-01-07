@@ -1,0 +1,56 @@
+// ========== Start fadeInUp
+.fadeInUp-enter-active,
+.fadeInUp-leave-active {
+  transition-duration: 0.6s;
+  transition-property: opacity;
+  overflow: hidden;
+}
+
+.fadeInUp-enter,
+.fadeInUp-leave-to {
+  opacity: 0;
+}
+
+.fadeInUp-enter-to,
+.fadeInUp-leave {
+  opacity: 1;
+}
+// ========== End fadeInUp
+
+// ========== Start fadeUpTransform
+.fadeUpTransform-enter-active,
+.fadeUpTransform-leave-active {
+  transition: all 0.2s linear;
+}
+
+.fadeUpTransform-enter,
+.fadeUpTransform-leave-to {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.fadeUpTransform-enter-to,
+.fadeUpTransform-leave {
+  opacity: 1;
+  transform: translateY(0);
+}
+// ========== End fadeScale
+
+// ========== Start fadeIn
+.fadeIn-enter-active,
+.fadeIn-leave-active {
+  transition-duration: 0.6s;
+  transition-property: opacity;
+  overflow: hidden;
+}
+
+.fadeIn-enter,
+.fadeIn-leave-to {
+  opacity: 0;
+}
+
+.fadeIn-enter-to,
+.fadeIn-leave {
+  opacity: 1;
+}
+// ========== End fadeIn

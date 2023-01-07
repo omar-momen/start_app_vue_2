@@ -1,0 +1,60 @@
+// ================ Ar Fonts
+@font-face {
+  font-family: janaArFont;
+  src: url("../fonts/ar/Everett-Jana.otf");
+}
+@font-face {
+  font-family: lightArFont;
+  src: url("../fonts/ar/Everett-Light.otf");
+}
+@font-face {
+  font-family: mediumArFont;
+  src: url("../fonts/ar/Everett-Medium.otf");
+}
+@font-face {
+  font-family: regularArFont;
+  src: url("../fonts/ar/Everett-Regular.otf");
+}
+
+// Primary Head
+.h_1 {
+}
+
+// Secondary Head
+.h_2 {
+}
+
+// Heading tertiary
+.h_3 {
+}
+
+// Para
+.para {
+  color: var(--main);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 20px 0;
+
+  &.big {
+    font-size: 18px;
+  }
+}
+
+// Colored Span etc..
+.coloredSpan {
+  font-weight: bold;
+  color: var(--app_color);
+}
+
+.underline {
+  text-decoration: underline;
+  transition: all 0.2s linear;
+
+  &:hover {
+    color: var(--app_color) !important;
+  }
+}
+
+.iziToast-message {
+  font-family: "Neo Sans Arabic";
+}

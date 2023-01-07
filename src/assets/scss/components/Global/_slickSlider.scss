@@ -1,0 +1,24 @@
+.slick-slider {
+  height: inherit;
+  max-height: inherit;
+
+  .slick-list {
+    height: inherit;
+    max-height: inherit;
+
+    .slick-track {
+      height: inherit;
+      max-height: inherit;
+
+      .slick-slide {
+        height: inherit;
+        max-height: inherit;
+
+        & > div {
+          height: inherit;
+          max-height: inherit;
+        }
+      }
+    }
+  }
+}

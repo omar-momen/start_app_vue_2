@@ -1,0 +1,42 @@
+:root {
+  // =========== START:: THEME COLORS ===========
+  --main: #171717;
+  --anti_main: #fff;
+
+  --body_bg: #eee;
+  --main_bg: #fff;
+  --input_bg: #fff;
+
+  --input_border: #cecece;
+  --main_shadow: #333;
+  --para_color: #a5a5a5;
+  --app_color: #2435da;
+
+  &.darkTheme {
+    --main: #fff;
+    --anti_main: #171717;
+
+    --body_bg: #333;
+    --main_bg: #000;
+    --input_bg: #333;
+
+    --input_border: #777;
+    --main_shadow: #eee;
+    --para_color: #fff;
+  }
+  // @media (prefers-color-scheme: dark) {
+  //   :root {
+  //   }
+  // }
+  // =========== END:: THEME COLORS ===========
+
+  // =========== START:: BRANDS COLORS ===========
+  --facebook: #4267b2;
+  --twitter: #1da1f2;
+  --whatsApp: #25d366;
+  --telegram: #0088cc;
+  --linkedin: #2867b2;
+  --youtube: #ff0000;
+  --instagram: #e4405f;
+  // =========== END:: BRANDS COLORS ===========
+}
