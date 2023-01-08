@@ -1,6 +1,6 @@
 <template>
   <transition name="fadeIn">
-    <div class="nav_dropDown" v-if="show">
+    <div class="nav_dropDown custom_card" v-if="show">
       <main>
         <slot></slot>
       </main>
@@ -28,9 +28,7 @@ export default {
   z-index: 999;
   top: 130%;
   right: -20px; // RTL
-  border: 1px solid #dcdcdc;
-  box-shadow: -1px -2px 10px 0px #eeeeee;
-  background: #fff;
+  border: 1px solid var(--border);
   border-radius: 10px;
 
   main {
@@ -42,7 +40,7 @@ export default {
     content: "";
     border-width: 12px;
     border-style: solid;
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent var(--main_bg) transparent;
     position: absolute;
     top: -24px;
     right: 20px; // RTL

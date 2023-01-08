@@ -1,6 +1,9 @@
 <template>
-  <nav class="theNav" :class="{ stikyNav: stikyNav, inView: inView }">
-    <div class="container">
+  <nav
+    class="theNav custom_card"
+    :class="{ stikyNav: stikyNav, inView: inView }"
+  >
+    <div class="logo_links_side">
       <!-- ============== Logo -->
       <div class="logo">
         <router-link to="/"><img :src="logo" alt="mainLogo" /></router-link>
@@ -8,7 +11,9 @@
 
       <!-- ============== Links -->
       <links-menu :links="links"></links-menu>
+    </div>
 
+    <div class="actions_side">
       <!-- ============== Actions -->
       <div class="actions">
         <!-- ** Search -->
@@ -17,11 +22,8 @@
         <!-- ** notification -->
         <notification-menu v-if="user.token" url="/lol"></notification-menu>
 
-        <!-- ** Language -->
-        <switch-language></switch-language>
-
-        <div @click="changeTheme">
-          <base-button>change_theme</base-button>
+        <div class="change_theme" @click="changeTheme">
+          <i class="fal fa-sun"></i>
         </div>
 
         <!-- ** User -->
@@ -31,6 +33,9 @@
         <base-button v-else link to="/authentication/login">{{
           $t("form.login")
         }}</base-button>
+
+        <!-- ** Language -->
+        <switch-language></switch-language>
       </div>
 
       <!-- ============== ToggleMenu -->
@@ -67,12 +72,20 @@ export default {
           path: "/",
         },
         {
-          title: this.$t("navbar.aboutUs"),
-          path: "/about-us",
+          title: this.$t("navbar.stories"),
+          path: "/stories",
         },
         {
-          title: this.$t("navbar.contactUs"),
-          path: "/contact-us",
+          title: this.$t("navbar.offers"),
+          path: "/offers",
+        },
+        {
+          title: this.$t("navbar.favorite"),
+          path: "/favorite",
+        },
+        {
+          title: this.$t("navbar.wallet"),
+          path: "/wallet",
         },
       ],
 
@@ -122,31 +135,60 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .theNav {
-  background: var(--main_bg);
   position: relative;
   top: 0;
-  padding: 5px 0;
   transition: all 0.3s linear;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
 
-  .container {
+  .logo_links_side {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     // LOGO
     .logo {
-      img {
-        height: 70px;
+      a {
+        height: 56px;
+        display: block;
+
+        img {
+          height: inherit;
+        }
       }
     }
+  }
+
+  .actions_side {
+    margin-inline-start: auto;
+    display: flex;
+    align-items: center;
 
     // Actions
     .actions {
       display: flex;
       justify-content: center;
       align-content: center;
+
+      i {
+        font-size: 25px;
+        transition: all 0.2s linear;
+        cursor: pointer;
+
+        &:hover {
+          color: var(--app_color);
+        }
+      }
+
+      .change_theme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #db8900;
+      }
 
       .user {
         cursor: pointer;
@@ -205,9 +247,7 @@ export default {
   @media (max-width: 992px) {
     padding-top: 15px;
 
-    .container {
-      justify-content: center;
-
+    .logo_links_side {
       .logo {
         margin-inline-end: auto;
         img {
@@ -218,7 +258,9 @@ export default {
       ul.links {
         display: none;
       }
+    }
 
+    .actions_side {
       .actions {
         & > a,
         .language {

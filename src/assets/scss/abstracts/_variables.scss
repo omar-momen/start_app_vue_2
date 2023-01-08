@@ -1,29 +1,32 @@
 :root {
   // =========== START:: THEME COLORS ===========
-  --main: #171717;
+  --main: #4b4b4b;
   --anti_main: #fff;
 
-  --body_bg: #eee;
-  --main_bg: #fff;
-  --input_bg: #fff;
+  --body_bg: #f6f6f6;
+  --main_bg: #ffffff;
+  --input_bg: #ffffff;
 
-  --input_border: #cecece;
-  --main_shadow: #333;
-  --para_color: #a5a5a5;
-  --app_color: #2435da;
+  --border: #c2c2c287;
+  --main_shadow: #2f2f2f2e;
+  --para_color: #4b4b4b;
 
   &.darkTheme {
     --main: #fff;
-    --anti_main: #171717;
+    --anti_main: #4b4b4b;
 
-    --body_bg: #333;
+    --body_bg: #181818;
     --main_bg: #000;
     --input_bg: #333;
 
-    --input_border: #777;
-    --main_shadow: #eee;
+    --border: #16161682;
+    --main_shadow: #97979740;
     --para_color: #fff;
   }
+
+  // ============= Fixed
+  --app_color: #783aa4;
+  --app_color_hover: #3d0367;
   // @media (prefers-color-scheme: dark) {
   //   :root {
   //   }

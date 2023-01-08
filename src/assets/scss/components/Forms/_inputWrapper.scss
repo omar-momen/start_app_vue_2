@@ -92,6 +92,12 @@
       input {
         background: #fff;
         border-radius: 20px;
+        font-size: 18px;
+
+        &::placeholder {
+          color: var(--app_color);
+          font-size: 18px;
+        }
       }
 
       .icon {
@@ -115,7 +121,7 @@
       }
 
       .colored {
-        color: #dee2e6;
+        color: var(--app_color);
         cursor: pointer;
 
         &:hover {

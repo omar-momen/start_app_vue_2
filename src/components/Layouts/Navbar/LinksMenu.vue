@@ -18,14 +18,6 @@
         </button>
       </template>
     </li>
-
-    <li class="link">
-      <v-icon class="LOLO" color="green" large> mdi-domain </v-icon>
-    </li>
-
-    <li>
-      <i class="fas fa-telescope"></i>
-    </li>
   </ul>
 </template>
 
@@ -56,7 +48,7 @@ html {
 
         &:hover,
         .router-link-exact-active {
-          background: var(--main);
+          background: var(--app_color);
           color: var(--anti_main);
         }
 
@@ -75,8 +67,8 @@ html {
         button {
           &:hover,
           .router-link-exact-active {
-            background: var(--main);
-            color: var(--anti_main);
+            background: var(--app_color);
+            color: var(--main);
           }
         }
       }

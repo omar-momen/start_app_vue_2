@@ -1,6 +1,6 @@
 <template>
   <span class="search">
-    <img src="@/assets/media/icons/search.svg" @click="show = !show" />
+    <span @click="show = !show"><i class="fad fa-search"></i></span>
 
     <search-model
       :show="show"
@@ -28,5 +28,6 @@ export default {
 .search {
   display: flex;
   align-items: center;
+  margin-top: 5px !important;
 }
 </style>

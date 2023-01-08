@@ -1,6 +1,6 @@
 <template>
   <div class="notification" @click.stop="show = !show">
-    <img src="@/assets/media/icons/notification.svg" />
+    <i class="far fa-bell"></i>
 
     <nav-dropdown :show="show" @close="show = false">
       <template v-slot>
@@ -22,7 +22,7 @@
           </li>
         </ul>
         <div class="noData" v-else>
-          <img src="@/assets/media/images/bg/noNotifications.webp" alt="" />
+          <img src="@/assets/media/images/bg/noNotifications.svg" alt="" />
         </div>
       </template>
     </nav-dropdown>
@@ -106,11 +106,14 @@ export default {
 }
 
 .noData {
+  height: 300px;
   width: 300px;
+  overflow: hidden;
 
   img {
-    height: 300px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
   }
 }
 </style>

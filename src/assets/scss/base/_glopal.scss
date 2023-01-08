@@ -24,11 +24,16 @@ body.my_app {
 
   .v-application {
     background: var(--body_bg);
-    color: var(--mainText);
+    color: var(--main);
     font-size: 20px;
     line-height: 1.7;
     font-family: regularArFont;
     min-height: 100vh;
+    padding: 15px 30px;
+
+    @media (max-width: 500px) {
+      padding: 15px;
+    }
 
     .title {
       font-family: inherit;
@@ -66,6 +71,17 @@ body.my_app {
   #nprogress {
     .bar {
       height: 4px;
+      background-color: var(--app_color);
+
+      .peg {
+        box-shadow: 0 0 10px var(--app_color), 0 0 5px var(--app_color);
+      }
+    }
+    .spinner {
+      .spinner-icon {
+        border-top-color: var(--app_color);
+        border-left-color: var(--app_color);
+      }
     }
   }
 }
@@ -73,7 +89,8 @@ body.my_app {
 /**** Scroll Style ****/
 
 ::-webkit-scrollbar {
-  width: 6px;
+  display: none; // ================ OPTION :D
+  width: 3px;
 }
 
 ::-webkit-scrollbar-track {
@@ -81,11 +98,11 @@ body.my_app {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--main);
+  background: var(--app_color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #adadad;
+  background: var(--app_color);
 }
 
 .mdi-menu-down::before {

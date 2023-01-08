@@ -51,14 +51,12 @@ body {
   a {
     position: relative;
     text-decoration: none;
-    padding: 0.4em 2em;
+    padding: 0.1em 0.7em;
     font-size: 20px;
     display: inline-block;
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--main);
-    color: var(--main);
-    background: var(--main_bg);
+    border-radius: 15px;
+    color: var(--anti_main);
+    background: var(--app_color);
     transition: all 0.2s linear;
     font-family: inherit;
     cursor: pointer;
@@ -113,19 +111,24 @@ body {
 
     &:hover,
     &:active {
-      background-color: var(--main);
+      background-color: var(--app_color_hover);
       color: var(--anti_main);
     }
   }
 }
 
 html.darkTheme {
-  button,
-  a {
-    &:hover,
-    &:active {
-      background-color: var(--main);
-      color: var(--anti_main);
+  body {
+    button,
+    a {
+      background-color: var(--app_color);
+      color: var(--main);
+
+      &:hover,
+      &:active {
+        background-color: var(--app_color_hover);
+        color: var(--main);
+      }
     }
   }
 }

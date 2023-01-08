@@ -81,7 +81,7 @@ export default {
     width: 400px;
     position: absolute;
     top: 0;
-    background: #fff;
+    background: var(--main_bg);
     height: 100%;
     overflow-y: scroll;
     transition: all 0.2s linear;
@@ -115,7 +115,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: var(--main);
+      background-color: var(--app_color);
       border-radius: 50%;
       z-index: 99;
 

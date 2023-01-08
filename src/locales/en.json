@@ -99,8 +99,17 @@
 
   "navbar": {
     "home": "Home",
-    "aboutUs": "AboutUs",
-    "contactUs": "ContactUs"
+    "stories": "Stories",
+    "offers": "Offers",
+    "favorite": "Favorite",
+    "wallet": "Wallet"
+  },
+
+  "footer": {
+    "aboutUs": "About Us",
+    "terms": "Terms & Conditions",
+    "policy": "Privacy Policy",
+    "services": "Services"
   },
 
   "search": {
@@ -115,7 +124,6 @@
   },
 
   "header": {},
-  "footer": {},
 
   "headers": {
     "created_at": "Created at",

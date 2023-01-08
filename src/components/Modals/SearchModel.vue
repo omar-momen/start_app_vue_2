@@ -65,7 +65,12 @@ export default {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background-image: url("../../assets/media/images/bg/search.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    ),
+    url("../../assets/media/images/bg/search.jpg");
   background-position: center;
   background-size: cover;
   inset: 0;
@@ -91,13 +96,19 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main);
+    background-color: var(--app_color);
     border-radius: 50%;
     z-index: 99;
 
     i {
       color: #fff;
-      font-size: 20px;
+      font-size: 20px !important;
+    }
+
+    &:hover {
+      i {
+        color: #fff !important;
+      }
     }
   }
 }

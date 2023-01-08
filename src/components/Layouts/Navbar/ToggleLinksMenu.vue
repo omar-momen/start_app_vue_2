@@ -5,12 +5,7 @@
     <side-menu v-if="show" :show="show" @closeMenu="show = false">
       <!-- ** Logo-->
       <div class="logo">
-        <router-link to="/"
-          ><img
-            class="mx-auto d-block"
-            src="@/assets/media/images/logo/logo_light.svg"
-            alt="mainLogo"
-        /></router-link>
+        <router-link to="/"><img :src="logo" alt="mainLogo" /></router-link>
       </div>
 
       <links-menu
@@ -19,13 +14,15 @@
         class="smallScreen"
       ></links-menu>
 
-      <!-- ** Language -->
-      <switch-language class="mx-auto d-block"></switch-language>
+      <div class="actions_side">
+        <!-- ** Language -->
+        <switch-language class="smallScreen"></switch-language>
 
-      <!-- ** Login -->
-      <base-button v-if="!user.token" link to="/login" class="block_center"
-        >Login</base-button
-      >
+        <!-- ** Login -->
+        <base-button v-if="!user.token" link to="/authentication/login">{{
+          $t("form.login")
+        }}</base-button>
+      </div>
     </side-menu>
   </div>
 </template>
@@ -49,32 +46,51 @@ export default {
   computed: {
     ...mapGetters({
       user: "auth_module/currentUser",
+      theme: "theme_module/current_theme",
     }),
+
+    logo() {
+      if (this.theme == "light") {
+        return require("@/assets/media/images/logo/logo_light.svg");
+      } else {
+        return require("@/assets/media/images/logo/logo_dark.svg");
+      }
+    },
   },
 };
 </script>
 
 <style lang="scss">
-.theNav .container {
-  .logo {
-    img {
-      height: 100px;
+.theNav {
+  .toggleMenu {
+    .logo {
+      img {
+        height: 100px !important;
+        margin: 15px auto;
+        display: block;
+      }
     }
-  }
 
-  ul.links.smallScreen {
-    display: block;
-    flex-direction: column;
-    padding: 30px 10px 20px;
+    ul.links.smallScreen {
+      display: block;
+      flex-direction: column;
+      padding: 10px;
 
-    li.link {
-      margin: 10px auto;
-      width: fit-content;
+      li.link {
+        margin: 10px auto;
+        width: fit-content;
+      }
     }
-  }
 
-  .language {
-    width: fit-content;
+    .actions_side {
+      display: flex;
+      flex-direction: column;
+
+      .language {
+        margin: 25px 0;
+        width: fit-content;
+      }
+    }
   }
 }
 </style>

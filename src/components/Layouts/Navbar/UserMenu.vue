@@ -1,36 +1,16 @@
 <template>
   <div class="user">
-    <img
-      @click="show = !show"
-      src="@/assets/media/images/avatars/1.svg"
-      alt=""
-    />
-    <!-- <img class="userImage" @click="show = !show" :src="user.image" alt="" /> -->
-
-    <side-menu
-      direction="right"
-      v-if="show"
-      :show="show"
-      @closeMenu="show = false"
-    >
-    </side-menu>
+    <router-link to="/profile">
+      <img src="@/assets/media/images/avatars/1.svg" alt="" />
+    </router-link>
+    <!-- <router-link to="/profile">
+      <img :src="user.image" alt="" />
+    </router-link> -->
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
-
-import UserCard from "../../Global/UserCard.vue";
-
-export default {
-  components: { UserCard },
-
-  data() {
-    return {
-      show: false,
-    };
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>

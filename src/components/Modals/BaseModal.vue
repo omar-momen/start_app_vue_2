@@ -47,7 +47,7 @@ export default {
     overflow-y: scroll;
     width: auto;
     height: auto;
-    background: #fff;
+    background: var(--main_bg);
     position: relative;
     border-radius: 15px;
 
