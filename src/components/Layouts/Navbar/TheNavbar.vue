@@ -5,7 +5,7 @@
   >
     <div class="logo_links_side">
       <!-- ============== Logo -->
-      <div class="logo">
+      <div class="logo mx-2">
         <router-link to="/"><img :src="logo" alt="mainLogo" /></router-link>
       </div>
 
@@ -102,9 +102,9 @@ export default {
 
     logo() {
       if (this.theme == "light") {
-        return require("@/assets/media/images/logo/logo_light.svg");
+        return require("@/assets/media/images/logo/logo_light.png");
       } else {
-        return require("@/assets/media/images/logo/logo_dark.svg");
+        return require("@/assets/media/images/logo/logo_dark.png");
       }
     },
   },

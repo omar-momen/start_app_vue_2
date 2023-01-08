@@ -51,9 +51,9 @@ export default {
 
     logo() {
       if (this.theme == "light") {
-        return require("@/assets/media/images/logo/logo_light.svg");
+        return require("@/assets/media/images/logo/logo_light.png");
       } else {
-        return require("@/assets/media/images/logo/logo_dark.svg");
+        return require("@/assets/media/images/logo/logo_dark.png");
       }
     },
   },

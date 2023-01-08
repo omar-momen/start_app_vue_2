@@ -1,6 +1,6 @@
 <template>
   <footer class="theFooter custom_card">
-    <div class="copyRight">Copyright © {{ new Date().getFullYear() }} MJRB</div>
+    <div class="copyRight">Copyright © {{ new Date().getFullYear() }} O_M</div>
 
     <ul class="links">
       <li

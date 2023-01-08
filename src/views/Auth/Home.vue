@@ -3,7 +3,7 @@
     <!-- ============== Logo -->
     <div class="logo">
       <router-link to="/"
-        ><img src="@/assets/media/images/logo/logo_light.svg" alt="mainLogo"
+        ><img src="@/assets/media/images/logo/logo_light.png" alt="mainLogo"
       /></router-link>
     </div>
 
